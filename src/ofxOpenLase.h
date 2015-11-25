@@ -115,7 +115,7 @@ public:
 		params.flatness = 0.00001;
 		params.render_flags = RENDER_GRAYSCALE;
 		
-		if(olInit(32, 30000) < 0)
+		if(olInit(32, 300000) < 0)
 		{
 			ofSystemAlertDialog("jack server not running?");
 			ofExit(-1);
@@ -396,6 +396,27 @@ public:
 	{
 		params.end_wait = wait;
 		params.end_dwell = dwell;
+		
+		olSetRenderParams(&params);
+	}
+	
+	void setSnap(float v)
+	{
+		params.snap = v;
+		
+		olSetRenderParams(&params);
+	}
+	
+	void setMaxFrameLen(int v)
+	{
+		params.max_framelen = v;
+		
+		olSetRenderParams(&params);
+	}
+	
+	void setFlatness(float v)
+	{
+		params.flatness = v;
 		
 		olSetRenderParams(&params);
 	}
