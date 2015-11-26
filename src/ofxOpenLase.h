@@ -250,7 +250,7 @@ public:
 						for (int i = 0; i < num_index; i++)
 						{
 							ofIndexType idx = vertexData.getIndex(i);
-							const ofColor& c = vertexData.getColor(idx) * 255;
+							const ofColor& c = vertexData.getColor(idx);
 							const ofVec3f& v = vertexData.getVertex(idx);
 							olVertex3(v.x, v.y, v.z, c.getHex());
 						}
@@ -271,7 +271,7 @@ public:
 					{
 						for (int i = 0; i < vertexData.getNumVertices(); i++)
 						{
-							const ofColor& c = vertexData.getColor(i) * 255;
+							const ofColor& c = vertexData.getColor(i);
 							const ofVec3f& v = vertexData.getVertex(i);
 							olVertex3(v.x, v.y, v.z, c.getHex());
 						}
@@ -297,7 +297,7 @@ public:
 				{
 					for (int i = 0; i < vertexData.getNumVertices(); i++)
 					{
-						const ofColor& c = vertexData.getColor(i) * 255;
+						const ofColor& c = vertexData.getColor(i);
 						const ofVec3f& v = vertexData.getVertex(i);
 						olVertex3(v.x, v.y, v.z, c.getHex());
 					}
